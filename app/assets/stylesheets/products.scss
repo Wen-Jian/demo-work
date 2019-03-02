@@ -1,0 +1,41 @@
+// Place all the styles related to the products controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.item-box {
+    box-shadow: 5px 5px rgb(185, 184, 184);
+    margin-top: 35px;
+}
+
+.showcase-box {
+    height: 150px;
+    overflow: hidden;
+    background: white;
+}
+
+.showcase-img {
+    // height: 200px;
+    width: 100%;
+}
+
+.add-new-btn {
+    // float: right;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.detail-img {
+    width: 100%;
+}
+
+.detail-showcase-box {
+    height: 300px;
+    overflow: hidden;
+    background: white;
+}
+
+.go-back {
+    display: block;
+    width: 20%;
+    margin-top: 70px;
+}

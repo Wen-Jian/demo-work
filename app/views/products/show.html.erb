@@ -1,0 +1,16 @@
+<div class="container">
+    <%=link_to '返回', root_path, class: 'btn btn-success go-back'%>
+    <%= link_to '編輯',  edit_product_path(@product.id), class: 'btn btn-primary go-back', style: 'float: right;' if @user&.admin? || @user&.role&.user_role == ConstantDefinition::USER_ROLE_AUTHORIZED_ADMIN%>
+    <div style="height: 500px; margin-top: 10px;">
+        <div class="col-sm-5 detail-showcase-box">
+            <%= image_tag @product.image_url, class: 'detail-img', align: "middle" if @product.image_url.present?%>
+        </div>
+        <div class="col-sm-7">
+            <h3>商品名稱：<%=@product.item_name%></h3>
+            <h3>商品價格：<%=@product.item_price%></h3>
+            <h3>折扣碼：<%= (@user.nil? || @user.role.user_role == ConstantDefinition::USER_ROLE_NORMAL) ? (link_to '想要折扣碼？升級prime會員', upgrate_user_path(1)) : @product.discount %></h3>
+            <a class="btn btn-primary" style="margin-top: 20px;">加入購物車</a>
+            <a class="btn btn-danger" style="margin-top: 20px;">直接購買</a>
+        </div>
+    </div>
+</div>

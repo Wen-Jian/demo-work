@@ -1,0 +1,13 @@
+<div class="container">
+    <div class='session-box'>
+        <% if @errors.present? %>
+            <% @errors.each do |e|%>
+                <p style="color: red"><%= e %></p>
+            <% end %>
+        <%end%>
+        <%= form_for @user, url: create_user_session_path, method: :post do |f| %>
+            <%= render 'form_user_info', f: f %>
+            <%= f.submit '登入', class: 'btn btn-primary', style: 'margin-left: 45%; margin-right: 45%;'%>       
+        <% end %>
+    </div>
+</div>

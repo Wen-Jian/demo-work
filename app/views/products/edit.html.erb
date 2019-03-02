@@ -1,0 +1,7 @@
+<div class="container">
+    <%= form_for @product, url: product_path, method: :put do |f|%>
+        <%= render 'form_product_edition', f: f %>
+        <%= link_to '取消', root_path, class: 'btn btn-primary'%>
+        <%= f.submit '編輯', class: 'btn btn-danger'%>
+    <% end %>
+</div>

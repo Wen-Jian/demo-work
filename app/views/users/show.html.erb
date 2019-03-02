@@ -1,0 +1,57 @@
+<div class="container">
+    <h2>使用者資訊</h2>
+    <% if @errors.present? %>
+        <% @errors.each do |e|%>
+            <h3 style="color: red;"><%= e %></h3>
+        <% end %>
+    <%end%>
+    <%= link_to '編輯', edit_user_path(@user.id), class: 'btn btn-primary', style: 'float: right; margin-bottom: 30px;'%>
+    <table class='table table-hover'>
+        <tr>
+            <th class="user-info-td">使用者姓名</th>
+            <td class="user-info-td"><%= @selected_user.name %></td>
+        </tr>
+        <tr>
+            <th>使用者帳號</th>
+            <td><%= @selected_user.account %></td>
+        </tr>
+        <% if @user.admin? %>
+            <tr>
+                <th>使用者權限</th>
+                <td>
+                    <div id='show-user-role'>
+                        <p style="display: inline-block;"><%= ConstantDefinition::USER_ROLE[@selected_user.role.user_role] %></p>
+                        <%= link_to '編輯', '', class: 'btn btn-primary', style: 'margin-left: 10px;', id: 'role_edit_btn' if !@selected_user.admin? %>
+                    </div>
+                    <div id='update-user-role' style="display: none;">
+                         <%= form_for :user_role, url: edit_user_role_user_path, method: :patch do |f| %>
+                            <%= f.select :user_role, options_for_select([["Select One", ""], ["一般管理者", ConstantDefinition::USER_ROLE_AUTHORIZED_ADMIN], ["高級使用者", ConstantDefinition::USER_ROLE_PRIME], ["一般使用者",  ConstantDefinition::USER_ROLE_NORMAL]]), :class => 'selectpicker' %>
+                            <%= f.submit '更新', class: 'btn btn-primary', id: 'role_update_btn'%>
+                            <div id="cancel-btn" class="btn btn-success">取消</div>
+                        <% end %>
+                    </div>
+                </td>
+            </tr>
+        <% end %>
+    </table>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $('#role_edit_btn').on('click', function(e) {
+            $('#update-user-role').show();
+            $('#show-user-role').hide();
+            e.preventDefault();
+        })
+
+        $('#cancel-btn').on('click', function(e) {
+            $('#update-user-role').hide();
+            $('#show-user-role').show();
+            e.preventDefault();
+        })
+
+        $('#role_update_btn').on('click', function() {
+            url = 'https://' + window.location.host + '/users/'
+        })
+    })
+</script>

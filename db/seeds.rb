@@ -5,3 +5,37 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+include ConstantDefinition
+
+ActiveRecord::Base.transaction do
+    role_1 = Role.create!(
+    user_role: USER_ROLE_ADMIN,
+    discount_flag: true
+    )
+
+    p role_1
+
+    role_2 = Role.create!(
+        user_role: USER_ROLE_PRIME,
+        discount_flag: true
+    )
+
+    p role_2
+
+    role_3 = Role.create!(
+        user_role: USER_ROLE_NORMAL, 
+        discount_flag: false
+    )
+
+    p role_3
+
+    admin = User.create!(
+        name: 'admin',
+        account: 'admin',
+        password: 'Admin123',
+        role_id: Role.find_by(user_role: USER_ROLE_ADMIN).id
+    )
+
+    p admin
+end

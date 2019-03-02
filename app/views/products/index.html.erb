@@ -1,0 +1,21 @@
+<div class="container">
+    <%= link_to 'add_new_product', new_product_path, class: "btn btn-primary add-new-btn", style: 'float: right;' if @user&.admin? %>
+    <div class="row" style="margin-top: 80px;">
+        <% if @products.present? %>
+            <% @products.each do |p| %>
+                <div class="col-sm-3">
+                    <div class="item-box" style="">
+                        <a href=<%= product_path(p.id) %> style="display: block;">
+                            <div class="showcase-box">
+                                <%= image_tag p.image_url, class: 'showcase-img', align: "middle" if p.image_url.present?%>
+                            </div>
+                            <div style="font-size: 45px;">
+                                <%= p.item_name %>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            <% end %>
+        <% end %>
+    </div>
+</div>

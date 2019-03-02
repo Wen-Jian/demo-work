@@ -10,6 +10,20 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div style="position: absolute; right: 5px;">
+      <%= link_to '首頁', root_path%>
+      <%= link_to 'register', new_user_path, class: "btn btn-primary add-new-btn " unless @user.present?%>
+      <%= link_to 'login', login_user_path, class: "btn btn-primary add-new-btn " unless @user.present? %>
+      <%= link_to @user.name, user_path(@user.id), class: "add-new-btn " if @user&.id.present? %>
+      <%= link_to 'logout', logout_user_path(@user.id), class: "btn btn-primary add-new-btn " if @user&.id.present? %>
+    </div>
+    <br>
+    <ul class="list-inline container nav nav-tabs" style="margin-top: 70px;">
+      <li><%= link_to '商品', root_path if @user&.id.present? && @user&.admin?%></li>
+      <li><%= link_to '使用者管理', users_path if  @user&.id.present? && @user&.admin?%></li>
+    </ul>
+    <div >
+      <%= yield %>
+    </div>
   </body>
 </html>

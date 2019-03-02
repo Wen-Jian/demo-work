@@ -1,0 +1,16 @@
+<div class="container">
+    <% if @users.present? %>
+       <table class="table table-hover">
+           <tr>
+               <th>會員名稱</th>
+               <th>會員帳號</th>
+           </tr>
+           <% @users.each do |u|%>
+               <tr>
+                    <td><%= link_to u.name, user_path(u.id) %></td>
+                    <td><%= u.account %></td>
+               </tr>
+           <% end %>
+       </table>
+    <% end %>
+</div>
