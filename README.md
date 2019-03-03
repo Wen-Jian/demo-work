@@ -55,5 +55,18 @@ $ rails s
 you can access the web application through browser on the localhost:3000
 
 
+For creating/editing product please login as admin 
 
-* ...
+name: admin
+account: admin
+password: Admin123
+
+There are 4 type user_role
+1. admin: The heightest user role who can change user_role, create/edit product.
+
+2. authorized_role: The user who is authorized to create/edit product and edit his/her user information.
+
+3. prime user: The user can access the discount price for products and edit his/her user information
+
+4. normal user: basic membership who can only edit the his/her user informaion.
+
