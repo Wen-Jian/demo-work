@@ -1,0 +1,13 @@
+#!/usr/bin/env ruby
+CMD = ARGV.first
+case CMD
+when 'web'
+  exec 'passenger start -p 3000' \
+    ' --nginx-bin /usr/local/nginx/sbin/nginx'
+when 'sidekiq'
+  exec 'bundle exec sidekiq --index 0 --pidfile /var/run/sidekiq.pid -v'
+when 'rake'
+  exec "bundle exec #{ARGV.join(' ')}"
+else
+  exec ARGV.join(' ')
+end

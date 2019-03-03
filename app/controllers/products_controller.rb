@@ -6,7 +6,8 @@ class ProductsController < ApplicationController
     end
 
     def show
-        @product = Product.find(params[:id])
+        @product = Product.find_by(id: params[:id])
+        redirect_to root_path if @product.nil?
         session[:selected_prod_id] = params[:id]
     end
 
@@ -29,7 +30,7 @@ class ProductsController < ApplicationController
     def update
         params = product_params
         @product = Product.find(params[:id])
-        render action: :new and return unless params_valid?(params)
+        render action: :edit and return unless params_valid?(params)
         params.delete(:id)
         @product.update!(params)
         redirect_to root_path
