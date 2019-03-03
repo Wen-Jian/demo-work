@@ -7,6 +7,7 @@ class UsersController < ApplicationController
     before_action :check_user_role, only: [:index, :edit_user_role]
 
     def index
+        redirect_to root_path unless @user.admin?
         @users = User.all
     end
 
@@ -16,10 +17,12 @@ class UsersController < ApplicationController
     end
 
     def new
+        redirect_to root_path and return if @user.present?
         @user = User.new()
     end
 
     def create
+        redirect_to root_path and return if @user.present?
         @errors = []
         params = session_params
         @user = User.new(params)
@@ -82,7 +85,6 @@ class UsersController < ApplicationController
     def edit_user_role
         @errors = []
         user_role = Role.find_by(user_role: params[:user_role][:user_role])
-        debugger
         @errors << "請指定使用者權限" if params[:user_role][:user_role].blank? || user_role.nil?
         @selected_user = User.find_by(id: params[:id])
         render action: :show and return if @errors.present?
