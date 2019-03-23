@@ -1,0 +1,76 @@
+I, [2019-03-23T13:09:33.073076 #29065]  INFO -- : Refreshing Gem list
+I, [2019-03-23T13:09:35.913551 #29065]  INFO -- : listening on addr=/home/ubuntu/demo-work/shared/sockets/unicorn.sock fd=12
+I, [2019-03-23T13:09:35.913691 #29065]  INFO -- : worker=0 spawning...
+I, [2019-03-23T13:09:35.915569 #29065]  INFO -- : worker=1 spawning...
+I, [2019-03-23T13:09:35.916505 #29065]  INFO -- : master process ready
+I, [2019-03-23T13:09:35.921548 #29069]  INFO -- : worker=0 spawned pid=29069
+I, [2019-03-23T13:09:35.921666 #29069]  INFO -- : worker=0 ready
+I, [2019-03-23T13:09:35.922283 #29071]  INFO -- : worker=1 spawned pid=29071
+I, [2019-03-23T13:09:35.922398 #29071]  INFO -- : worker=1 ready
+I, [2019-03-23T13:18:21.999662 #29065]  INFO -- : reaped #<Process::Status: pid 29069 exit 0> worker=0
+I, [2019-03-23T13:18:21.999772 #29065]  INFO -- : reaped #<Process::Status: pid 29071 exit 0> worker=1
+I, [2019-03-23T13:18:21.999836 #29065]  INFO -- : master complete
+I, [2019-03-23T13:20:15.838483 #29387]  INFO -- : Refreshing Gem list
+I, [2019-03-23T13:20:17.662482 #29387]  INFO -- : unlinking existing socket=/home/ubuntu/demo-work/shared/sockets/unicorn.sock
+I, [2019-03-23T13:20:17.662641 #29387]  INFO -- : listening on addr=/home/ubuntu/demo-work/shared/sockets/unicorn.sock fd=12
+I, [2019-03-23T13:20:17.662739 #29387]  INFO -- : worker=0 spawning...
+I, [2019-03-23T13:20:17.664374 #29387]  INFO -- : worker=1 spawning...
+I, [2019-03-23T13:20:17.665125 #29391]  INFO -- : worker=0 spawned pid=29391
+I, [2019-03-23T13:20:17.665276 #29391]  INFO -- : worker=0 ready
+I, [2019-03-23T13:20:17.666252 #29387]  INFO -- : master process ready
+I, [2019-03-23T13:20:17.671510 #29394]  INFO -- : worker=1 spawned pid=29394
+I, [2019-03-23T13:20:17.671646 #29394]  INFO -- : worker=1 ready
+bundler: failed to load command: unicorn (/home/ubuntu/.rbenv/versions/2.5.3/bin/unicorn)
+ArgumentError: Already running on PID:29387 (or pid=/home/ubuntu/demo-work/shared/pids/unicorn.pid is stale)
+  /home/ubuntu/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/unicorn-5.5.0/lib/unicorn/http_server.rb:207:in `pid='
+  /home/ubuntu/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/unicorn-5.5.0/lib/unicorn/http_server.rb:139:in `start'
+  /home/ubuntu/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/unicorn-5.5.0/bin/unicorn:128:in `<top (required)>'
+  /home/ubuntu/.rbenv/versions/2.5.3/bin/unicorn:23:in `load'
+  /home/ubuntu/.rbenv/versions/2.5.3/bin/unicorn:23:in `<top (required)>'
+bundler: failed to load command: unicorn (/home/ubuntu/.rbenv/versions/2.5.3/bin/unicorn)
+ArgumentError: Already running on PID:29387 (or pid=/home/ubuntu/demo-work/shared/pids/unicorn.pid is stale)
+  /home/ubuntu/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/unicorn-5.5.0/lib/unicorn/http_server.rb:207:in `pid='
+  /home/ubuntu/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/unicorn-5.5.0/lib/unicorn/http_server.rb:139:in `start'
+  /home/ubuntu/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/unicorn-5.5.0/bin/unicorn:128:in `<top (required)>'
+  /home/ubuntu/.rbenv/versions/2.5.3/bin/unicorn:23:in `load'
+  /home/ubuntu/.rbenv/versions/2.5.3/bin/unicorn:23:in `<top (required)>'
+bundler: failed to load command: unicorn (/home/ubuntu/.rbenv/versions/2.5.3/bin/unicorn)
+ArgumentError: Already running on PID:29387 (or pid=/home/ubuntu/demo-work/shared/pids/unicorn.pid is stale)
+  /home/ubuntu/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/unicorn-5.5.0/lib/unicorn/http_server.rb:207:in `pid='
+  /home/ubuntu/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/unicorn-5.5.0/lib/unicorn/http_server.rb:139:in `start'
+  /home/ubuntu/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/unicorn-5.5.0/bin/unicorn:128:in `<top (required)>'
+  /home/ubuntu/.rbenv/versions/2.5.3/bin/unicorn:23:in `load'
+  /home/ubuntu/.rbenv/versions/2.5.3/bin/unicorn:23:in `<top (required)>'
+bundler: failed to load command: unicorn (/home/ubuntu/.rbenv/versions/2.5.3/bin/unicorn)
+ArgumentError: Already running on PID:29387 (or pid=/home/ubuntu/demo-work/shared/pids/unicorn.pid is stale)
+  /home/ubuntu/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/unicorn-5.5.0/lib/unicorn/http_server.rb:207:in `pid='
+  /home/ubuntu/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/unicorn-5.5.0/lib/unicorn/http_server.rb:139:in `start'
+  /home/ubuntu/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/unicorn-5.5.0/bin/unicorn:128:in `<top (required)>'
+  /home/ubuntu/.rbenv/versions/2.5.3/bin/unicorn:23:in `load'
+  /home/ubuntu/.rbenv/versions/2.5.3/bin/unicorn:23:in `<top (required)>'
+I, [2019-03-23T14:09:21.034148 #29387]  INFO -- : reaped #<Process::Status: pid 29391 exit 0> worker=0
+I, [2019-03-23T14:09:21.034256 #29387]  INFO -- : reaped #<Process::Status: pid 29394 exit 0> worker=1
+I, [2019-03-23T14:09:21.034316 #29387]  INFO -- : master complete
+I, [2019-03-23T14:10:05.460321 #30986]  INFO -- : Refreshing Gem list
+I, [2019-03-23T14:10:06.263810 #30986]  INFO -- : unlinking existing socket=/home/ubuntu/demo-work/shared/sockets/unicorn.sock
+I, [2019-03-23T14:10:06.263961 #30986]  INFO -- : listening on addr=/home/ubuntu/demo-work/shared/sockets/unicorn.sock fd=12
+I, [2019-03-23T14:10:06.264056 #30986]  INFO -- : worker=0 spawning...
+I, [2019-03-23T14:10:06.265631 #30986]  INFO -- : worker=1 spawning...
+I, [2019-03-23T14:10:06.266361 #30990]  INFO -- : worker=0 spawned pid=30990
+I, [2019-03-23T14:10:06.266492 #30990]  INFO -- : worker=0 ready
+I, [2019-03-23T14:10:06.267464 #30986]  INFO -- : master process ready
+I, [2019-03-23T14:10:06.272400 #30993]  INFO -- : worker=1 spawned pid=30993
+I, [2019-03-23T14:10:06.272547 #30993]  INFO -- : worker=1 ready
+I, [2019-03-23T14:16:47.142591 #30986]  INFO -- : reaped #<Process::Status: pid 30990 exit 0> worker=0
+I, [2019-03-23T14:16:47.142716 #30986]  INFO -- : reaped #<Process::Status: pid 30993 exit 0> worker=1
+I, [2019-03-23T14:16:47.142778 #30986]  INFO -- : master complete
+I, [2019-03-23T14:17:13.880238 #31253]  INFO -- : Refreshing Gem list
+I, [2019-03-23T14:17:14.678553 #31253]  INFO -- : unlinking existing socket=/home/ubuntu/demo-work/shared/sockets/unicorn.sock
+I, [2019-03-23T14:17:14.678756 #31253]  INFO -- : listening on addr=/home/ubuntu/demo-work/shared/sockets/unicorn.sock fd=12
+I, [2019-03-23T14:17:14.678862 #31253]  INFO -- : worker=0 spawning...
+I, [2019-03-23T14:17:14.680588 #31253]  INFO -- : worker=1 spawning...
+I, [2019-03-23T14:17:14.681295 #31257]  INFO -- : worker=0 spawned pid=31257
+I, [2019-03-23T14:17:14.681636 #31257]  INFO -- : worker=0 ready
+I, [2019-03-23T14:17:14.682604 #31253]  INFO -- : master process ready
+I, [2019-03-23T14:17:14.688033 #31260]  INFO -- : worker=1 spawned pid=31260
+I, [2019-03-23T14:17:14.688149 #31260]  INFO -- : worker=1 ready
